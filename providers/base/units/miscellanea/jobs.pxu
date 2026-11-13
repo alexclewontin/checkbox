@@ -215,6 +215,22 @@ command: kernel_taint_test.py
 
 plugin: shell
 category_id: com.canonical.plainbox::miscellanea
+estimated_duration: 2.0
+id: miscellanea/lockdown_module_rejections
+user: root
+_summary: Make sure that kernel lockdown did not reject module loads
+_purpose:
+ Make sure that kernel lockdown or module signature enforcement did not reject
+ a module load during this boot. This includes loads from the initramfs.
+ A rejection can cause a function to not operate correctly. If Checkbox does
+ not find the hardware because of a rejection, Checkbox can skip other tests.
+ Some rejections do not cause problems. For example, the initramfs can contain
+ an unsigned module, and the root filesystem can contain the correctly signed
+ module. The test shows all rejections.
+command: check_lockdown_module_rejections.py
+
+plugin: shell
+category_id: com.canonical.plainbox::miscellanea
 id: miscellanea/bmc_info
 requires:
  executable.name == 'ipmitool'

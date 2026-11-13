@@ -41,6 +41,7 @@ include:
     miscellanea/ubuntu-desktop-recommends          certification-status=blocker
     miscellanea/ubuntu-desktop-minimal-recommends  certification-status=blocker
     miscellanea/grub_file_check                    certification-status=blocker
+    miscellanea/lockdown_module_rejections         certification-status=non-blocker
 bootstrap_include:
     fwts
 
@@ -81,6 +82,7 @@ mandatory_include:
     miscellanea/get_maas_version               certification-status=blocker
     miscellanea/ipmi_test                      certification-status=blocker
     miscellanea/kernel_taint_test              certification-status=blocker
+    miscellanea/lockdown_module_rejections     certification-status=non-blocker
     miscellanea/maas_user_check                certification-status=blocker
     miscellanea/reboot_firmware                certification-status=non-blocker
     miscellanea/secure_boot_mode               certification-status=non-blocker
